@@ -1,5 +1,5 @@
 {
-  "name": "MRapor-kernel",
+  "name": "mrapor-kernel",
   "version": "1.0.0",
   "description": "MRapor Backend API Service",
   "main": "src/server.js",
