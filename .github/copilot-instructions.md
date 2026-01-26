@@ -1,8 +1,8 @@
-# MRapor - Connector Rapor Uygulaması
+# RaporKolay - Connector Rapor Uygulaması
 
 ## Proje Genel Bakış
 
-MRapor, connector uygulaması üzerinden müşterilere özel raporlar sağlayan bir sistemdir. Kullanıcılar hem mobil (cep telefonu) hem de PC/web üzerinden raporlarına erişebilir.
+RaporKolay, connector uygulaması üzerinden müşterilere özel raporlar sağlayan bir sistemdir. Kullanıcılar hem mobil (cep telefonu) hem de PC/web üzerinden raporlarına erişebilir.
 
 ## Proje Yapısı
 

@@ -44,7 +44,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Routes
 app.get('/', (req, res) => {
-  res.json({ message: 'MRapor API Servisi Çalışıyor' });
+  res.json({ message: 'RaporKolay API Servisi Çalışıyor' });
 });
 
 // API Routes

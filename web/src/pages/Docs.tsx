@@ -14,11 +14,11 @@ export function Docs() {
 
   const content: Record<string, { title: string; body: JSX.Element }> = {
     baslangic: {
-      title: 'MRapor\'e Hoş Geldiniz',
+      title: 'RaporKolay\'e Hoş Geldiniz',
       body: (
         <div className="space-y-6">
           <p className="text-gray-700 dark:text-gray-300">
-            MRapor, SQL Server, MySQL ve PostgreSQL veritabanlarınızdan raporlar oluşturmanıza ve
+            RaporKolay, SQL Server, MySQL ve PostgreSQL veritabanlarınızdan raporlar oluşturmanıza ve
             bunlara her yerden erişmenize olanak tanıyan modern bir raporlama platformudur.
           </p>
 
@@ -33,7 +33,7 @@ export function Docs() {
 
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6">Hızlı Başlangıç</h3>
           <ol className="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>MRapor hesabı oluşturun</li>
+            <li>RaporKolay hesabı oluşturun</li>
             <li>Connector uygulamasını indirin ve kurun</li>
             <li>SQL Server bağlantı bilgilerinizi girin</li>
             <li>İlk raporunuzu oluşturun</li>
@@ -47,13 +47,13 @@ export function Docs() {
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">1. Connector Kurulumu</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            Connector, veritabanınızla MRapor arasında güvenli bağlantı kuran uygulamadır.
+            Connector, veritabanınızla RaporKolay arasında güvenli bağlantı kuran uygulamadır.
             Windows Server veya masaüstü bilgisayarınıza kurulur.
           </p>
 
           <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
             <code className="text-sm text-gray-800 dark:text-gray-200">
-              1. MRapor-connector-setup.exe dosyasını indirin<br />
+              1. RaporKolay-connector-setup.exe dosyasını indirin<br />
               2. Yönetici olarak çalıştırın<br />
               3. Kurulum sihirbazını takip edin<br />
               4. clientId ve clientPassword bilgilerinizi girin
@@ -84,7 +84,7 @@ export function Docs() {
           <img src="/public/img/sql-server-configuration-manager.png" alt="SQL Server Configuration Manager" className="rounded-lg border border-gray-300 dark:border-gray-700" />
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6">3. İlk Bağlantı</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            MRapor web veya mobil uygulamasından giriş yapın ve ayarlar bölümünden connector
+            RaporKolay web veya mobil uygulamasından giriş yapın ve ayarlar bölümünden connector
             bilgilerinizi girin.
           </p>
         </div>
@@ -96,7 +96,7 @@ export function Docs() {
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Rapor Oluşturma</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            MRapor'de raporlar SQL sorguları ile oluşturulur. Her rapor için özel filtreler,
+            RaporKolay'de raporlar SQL sorguları ile oluşturulur. Her rapor için özel filtreler,
             simgeler ve başlıklar tanımlayabilirsiniz.
           </p>
 
@@ -132,7 +132,7 @@ export function Docs() {
       body: (
         <div className="space-y-6">
           <p className="text-gray-700 dark:text-gray-300">
-            MRapor API'si ile kendi uygulamalarınızdan rapor verilerine erişebilirsiniz.
+            RaporKolay API'si ile kendi uygulamalarınızdan rapor verilerine erişebilirsiniz.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Authentication</h3>
@@ -172,7 +172,7 @@ export function Docs() {
       body: (
         <div className="space-y-6">
           <p className="text-gray-700 dark:text-gray-300">
-            MRapor, tüm SQL Server tabanlı ERP sistemleriyle uyumludur. Aşağıda popüler ERP
+            RaporKolay, tüm SQL Server tabanlı ERP sistemleriyle uyumludur. Aşağıda popüler ERP
             sistemleri için örnek sorgular bulabilirsiniz.
           </p>
 
@@ -222,7 +222,7 @@ export function Docs() {
             Dökümanlar
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            MRapor'i kullanmaya başlamak için ihtiyacınız olan her şey
+            RaporKolay'i kullanmaya başlamak için ihtiyacınız olan her şey
           </p>
         </div>
 

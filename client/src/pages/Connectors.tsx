@@ -593,7 +593,7 @@ export function Connectors() {
                     <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                         <Plug className="w-4 h-4" />
-                        MRapor Connector
+                        RaporKolay Connector
                       </h4>
                       <div className="grid grid-cols-2 gap-4">
                         <div>

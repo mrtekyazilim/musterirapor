@@ -11,7 +11,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Logo className="mb-4" />
             <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md">
-              MRapor ile her yerden raporlarınıza erişin. Kolay, hızlı ve güvenli raporlama çözümü.
+              RaporKolay ile her yerden raporlarınıza erişin. Kolay, hızlı ve güvenli raporlama çözümü.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             <p>
-              © {currentYear} MRapor Herhakkı saklıdır.
+              © {currentYear} RaporKolay Herhakkı saklıdır.
             </p>
             <p className="mt-1">
               Developed by{' '}

@@ -19,14 +19,14 @@ export function ThemeProvider({
   defaultTheme = 'dark',
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem('MRapor-theme') as Theme) || defaultTheme
+    () => (localStorage.getItem('RaporKolay-theme') as Theme) || defaultTheme
   )
 
   useEffect(() => {
     const root = window.document.documentElement
     root.classList.remove('light', 'dark')
     root.classList.add(theme)
-    localStorage.setItem('MRapor-theme', theme)
+    localStorage.setItem('RaporKolay-theme', theme)
   }, [theme])
 
   return (

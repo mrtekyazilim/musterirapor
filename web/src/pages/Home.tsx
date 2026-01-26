@@ -59,7 +59,7 @@ export function Home() {
                 Erişin
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                MRapor ile mobil, tablet ve masaüstü cihazlarınızdan raporlarınızı görüntüleyin.
+                RaporKolay ile mobil, tablet ve masaüstü cihazlarınızdan raporlarınızı görüntüleyin.
                 Kolay kurulum, güçlü raporlama, güvenli erişim.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -82,13 +82,13 @@ export function Home() {
               {/* Light mode preview */}
               <img
                 src="/img/preview1-light.png"
-                alt="MRapor Dashboard Preview"
+                alt="RaporKolay Dashboard Preview"
                 className="w-full h-auto rounded-lg shadow-2xl border border-gray-200 dark:hidden"
               />
               {/* Dark mode preview */}
               <img
                 src="/img/preview1.png"
-                alt="MRapor Dashboard Preview"
+                alt="RaporKolay Dashboard Preview"
                 className="hidden dark:block w-full h-auto rounded-lg shadow-2xl border border-gray-700"
               />
             </div>
@@ -101,7 +101,7 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Neden MRapor?
+              Neden RaporKolay?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Modern raporlama ihtiyaçlarınız için tasarlanmış, kullanımı kolay ve güçlü özellikler.
@@ -163,7 +163,7 @@ export function Home() {
             Hemen Başlayın
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            MRapor'i indirin ve dakikalar içinde raporlarınıza her yerden erişmeye başlayın.
+            RaporKolay'i indirin ve dakikalar içinde raporlarınıza her yerden erişmeye başlayın.
           </p>
           <Link
             to="/downloads"

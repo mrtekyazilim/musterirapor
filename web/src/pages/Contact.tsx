@@ -28,10 +28,10 @@ export function Contact() {
                     Email
                   </h3>
                   <a
-                    href="mailto:iletisim@MRapor.com.tr"
+                    href="mailto:iletisim@RaporKolay.com.tr"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                   >
-                    iletisim@MRapor.com.tr
+                    iletisim@RaporKolay.com.tr
                   </a>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="MRapor Konum"
+                title="RaporKolay Konum"
               />
             </div>
           </div>

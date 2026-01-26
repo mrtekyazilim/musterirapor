@@ -13,7 +13,7 @@ import { Toaster } from 'sonner'
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="MRapor-admin-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="RaporKolay-admin-theme">
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />

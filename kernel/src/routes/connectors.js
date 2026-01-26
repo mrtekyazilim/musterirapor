@@ -245,7 +245,7 @@ router.post('/:id/test', protect, async (req, res) => {
       let errorMessage = 'Connector bağlantısı başarısız';
       if (connectorError.response) {
         if (connectorError.response.status === 401) {
-          errorMessage = 'MRapor Connector ClientId veya ClientPassword yanlış';
+          errorMessage = 'RaporKolay Connector ClientId veya ClientPassword yanlış';
         } else {
           errorMessage = connectorError.response.data?.message || connectorError.response.statusText;
         }

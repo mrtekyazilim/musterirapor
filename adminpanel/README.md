@@ -1,4 +1,4 @@
-# MRapor Admin Panel
+# RaporKolay Admin Panel
 
 Admin panel uygulaması. React, TypeScript, Tailwind CSS ve shadcn/ui kullanır.
 

@@ -1,4 +1,4 @@
-# MRapor Kernel - Backend API
+# RaporKolay Kernel - Backend API
 
 Backend API servisi. Node.js, Express.js ve MongoDB kullanır.
 

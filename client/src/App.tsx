@@ -17,7 +17,7 @@ import { Toaster } from 'sonner'
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="MRapor-client-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="RaporKolay-client-theme">
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />

@@ -8,7 +8,7 @@ export function Downloads() {
       description: 'Windows 10 ve üzeri için masaüstü uygulaması',
       version: '1.0.0',
       size: '85 MB',
-      downloadUrl: '/downloads/MRapor-windows-1.0.0.exe',
+      downloadUrl: '/downloads/RaporKolay-windows-1.0.0.exe',
       available: false,
     },
     {
@@ -17,7 +17,7 @@ export function Downloads() {
       description: 'Android 8.0 ve üzeri için mobil uygulama',
       version: '1.0.0',
       size: '25 MB',
-      downloadUrl: '/downloads/MRapor-android-1.0.0.apk',
+      downloadUrl: '/downloads/RaporKolay-android-1.0.0.apk',
       available: false,
     },
     {
@@ -26,7 +26,7 @@ export function Downloads() {
       description: 'iPhone ve iPad için uygulama',
       version: '1.0.0',
       size: '30 MB',
-      downloadUrl: 'https://apps.apple.com/MRapor',
+      downloadUrl: 'https://apps.apple.com/RaporKolay',
       available: false,
     },
     {
@@ -35,7 +35,7 @@ export function Downloads() {
       description: 'macOS 11 ve üzeri için uygulama',
       version: '1.0.0',
       size: '95 MB',
-      downloadUrl: '/downloads/MRapor-macos-1.0.0.dmg',
+      downloadUrl: '/downloads/RaporKolay-macos-1.0.0.dmg',
       available: false,
     },
     {
@@ -57,7 +57,7 @@ export function Downloads() {
             İndirmeler
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            MRapor'i cihazınıza indirin ve her yerden raporlarınıza erişin.
+            RaporKolay'i cihazınıza indirin ve her yerden raporlarınıza erişin.
           </p>
         </div>
 

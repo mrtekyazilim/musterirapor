@@ -1,4 +1,4 @@
-# MRapor Client
+# RaporKolay Client
 
 Kullanıcı rapor uygulaması. React, TypeScript, Tailwind CSS, PWA ve shadcn/ui kullanır.
 

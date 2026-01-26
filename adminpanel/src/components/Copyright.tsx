@@ -4,7 +4,7 @@ export function Copyright() {
   return (
     <div className="text-center py-4 text-sm text-gray-600 dark:text-gray-400">
       <p>
-        © {currentYear} MRapor Herhakkı saklıdır.
+        © {currentYear} RaporKolay Herhakkı saklıdır.
       </p>
       <p className="mt-1">
         Developed by{' '}

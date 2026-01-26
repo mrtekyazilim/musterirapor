@@ -32,7 +32,7 @@ export function PWAInstallBanner() {
         <div className="flex items-center gap-3 flex-1 min-w-0">
           <Download className="w-5 h-5 flex-shrink-0" />
           <p className="text-sm sm:text-base font-medium truncate">
-            MRapor uygulamasını cihazınıza yükleyin
+            RaporKolay uygulamasını cihazınıza yükleyin
           </p>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">

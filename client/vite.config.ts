@@ -15,8 +15,8 @@ export default defineConfig({
       },
       includeAssets: ['img/icon.png', 'img/icon-192.png', 'img/icon-512.png'],
       manifest: {
-        name: 'MRapor - Rapor Sistemi',
-        short_name: 'MRapor',
+        name: 'RaporKolay - Rapor Sistemi',
+        short_name: 'RaporKolay',
         description: 'SQL Server bazlı rapor görüntüleme uygulaması',
         theme_color: '#2563eb',
         background_color: '#ffffff',

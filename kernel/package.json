@@ -1,7 +1,7 @@
 {
   "name": "mrapor-kernel",
   "version": "1.0.0",
-  "description": "MRapor Backend API Service",
+  "description": "RaporKolay Backend API Service",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "MRapor",
+    "RaporKolay",
     "api",
     "connector",
     "reports"

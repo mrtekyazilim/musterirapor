@@ -1,4 +1,4 @@
-# MRapor Projesini Başlatma Rehberi
+# RaporKolay Projesini Başlatma Rehberi
 
 ## 1. MongoDB Kurulumu ve Başlatma
 
