@@ -25,11 +25,11 @@ export function Logo({ className, size = 'md', variant = 'default' }: LogoProps)
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      <span className={`${sizeClasses[size]} rounded-full border-2 ${colorClasses} flex items-center justify-center font-bold pb-0.5`}>
-        En
+      <span className={`${sizeClasses[size]} ${colorClasses} flex items-center justify-center font-bold pb-0.5`}>
+        Rapor
       </span>
       <span className={`${textSizeClasses[size]} font-bold ${variant === 'white' ? 'text-white' : 'text-blue-600 dark:text-blue-400'}`}>
-        SQL
+        Kolay
       </span>
     </div>
   )

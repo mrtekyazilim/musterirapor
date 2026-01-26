@@ -5,9 +5,9 @@ interface LogoProps {
 
 export function Logo({ size = 'md', variant = 'default' }: LogoProps) {
   const sizeClasses = {
-    sm: 'w-7 h-7 text-sm',
-    md: 'w-9 h-9 text-base',
-    lg: 'w-11 h-11 text-lg'
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-2xl'
   }
 
   const textSizeClasses = {
@@ -22,11 +22,11 @@ export function Logo({ size = 'md', variant = 'default' }: LogoProps) {
 
   return (
     <div className="flex items-center gap-1">
-      <span className={`${sizeClasses[size]} rounded-full border-2 ${colorClasses} flex items-center justify-center font-bold pb-0.5`}>
-        M
+      <span className={`${sizeClasses[size]} ${colorClasses} flex items-center justify-center font-bold `}>
+        Rapor
       </span>
       <span className={`${textSizeClasses[size]} font-bold ${variant === 'white' ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
-        Rapor
+        Kolay
       </span>
     </div>
   )
