@@ -37,7 +37,7 @@ export function Layout() {
 
           // Backend'e yeni session oluştur
           try {
-            await axios.post('http://localhost:13301/api/sessions/create', {
+            await axios.post('http://localhost:13401/api/sessions/create', {
               deviceId,
               deviceName: 'Client App',
               browserInfo: navigator.userAgent
@@ -69,7 +69,7 @@ export function Layout() {
   const loadConnectors = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/connectors', {
+      const response = await axios.get('http://localhost:13401/api/connectors', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -99,7 +99,7 @@ export function Layout() {
 
           try {
             const updateResponse = await axios.put(
-              'http://localhost:13301/api/sessions/active-connector',
+              'http://localhost:13401/api/sessions/active-connector',
               { deviceId, connectorId: selectedConnector._id },
               { headers: { Authorization: `Bearer ${token}` } }
             )
@@ -125,7 +125,7 @@ export function Layout() {
       const deviceId = localStorage.getItem('deviceId')
 
       await axios.put(
-        'http://localhost:13301/api/sessions/active-connector',
+        'http://localhost:13401/api/sessions/active-connector',
         { deviceId, connectorId: connector._id },
         { headers: { Authorization: `Bearer ${token}` } }
       )

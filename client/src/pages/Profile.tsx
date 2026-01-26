@@ -19,7 +19,7 @@ export function Profile() {
   const loadUserInfo = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/auth/me', {
+      const response = await axios.get('http://localhost:13401/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -48,7 +48,7 @@ export function Profile() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.put(
-        'http://localhost:13301/api/auth/change-password',
+        'http://localhost:13401/api/auth/change-password',
         {
           currentPassword: passwordData.currentPassword,
           newPassword: passwordData.newPassword

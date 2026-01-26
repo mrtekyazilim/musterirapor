@@ -108,7 +108,7 @@ export function Users() {
   const loadUsers = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/customers', {
+      const response = await axios.get('http://localhost:13401/api/customers', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -142,7 +142,7 @@ export function Users() {
         }
       }
 
-      const response = await axios.post('http://localhost:13301/api/customers', formattedData, {
+      const response = await axios.post('http://localhost:13401/api/customers', formattedData, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -211,7 +211,7 @@ export function Users() {
       }
 
       const response = await axios.put(
-        `http://localhost:13301/api/customers/${editingUser._id}`,
+        `http://localhost:13401/api/customers/${editingUser._id}`,
         formattedData,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -256,7 +256,7 @@ export function Users() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.delete(
-        `http://localhost:13301/api/customers/${deletingUser._id}`,
+        `http://localhost:13401/api/customers/${deletingUser._id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       )
 
@@ -278,7 +278,7 @@ export function Users() {
       const deviceId = `admin-panel-${Date.now()}`
 
       const response = await axios.post(
-        `http://localhost:13301/api/auth/admin-login-as-customer/${user._id}`,
+        `http://localhost:13401/api/auth/admin-login-as-customer/${user._id}`,
         {
           deviceId,
           deviceName: 'Admin Panel',
@@ -289,7 +289,7 @@ export function Users() {
 
       if (response.data.success) {
         // Client token'ı URL parametresi olarak gönder
-        const clientUrl = `http://localhost:13303/auto-login?token=${encodeURIComponent(response.data.token)}&user=${encodeURIComponent(JSON.stringify(response.data.user))}&deviceId=${encodeURIComponent(deviceId)}`
+        const clientUrl = `http://localhost:13403/auto-login?token=${encodeURIComponent(response.data.token)}&user=${encodeURIComponent(JSON.stringify(response.data.user))}&deviceId=${encodeURIComponent(deviceId)}`
 
         // Client uygulamasını aç
         window.open(clientUrl, '_blank')

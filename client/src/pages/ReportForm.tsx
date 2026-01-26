@@ -122,7 +122,7 @@ export function ReportForm() {
     try {
       setLoading(true)
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get(`http://localhost:13301/api/reports/${id}`, {
+      const response = await axios.get(`http://localhost:13401/api/reports/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -213,7 +213,7 @@ export function ReportForm() {
 
       // Test query via customer/mssql endpoint (uses JWT auth + active session)
       const response = await axios.post(
-        'http://localhost:13301/api/connector-proxy/customer/mssql',
+        'http://localhost:13401/api/connector-proxy/customer/mssql',
         {
           query: processedQuery
         },
@@ -276,7 +276,7 @@ export function ReportForm() {
       if (isEdit) {
         // Update existing report
         const response = await axios.put(
-          `http://localhost:13301/api/reports/${id}`,
+          `http://localhost:13401/api/reports/${id}`,
           formData,
           {
             headers: { Authorization: `Bearer ${token}` }
@@ -290,7 +290,7 @@ export function ReportForm() {
       } else {
         // Create new report
         const response = await axios.post(
-          'http://localhost:13301/api/reports',
+          'http://localhost:13401/api/reports',
           formData,
           {
             headers: { Authorization: `Bearer ${token}` }
@@ -327,7 +327,7 @@ export function ReportForm() {
       }
 
       const response = await axios.post(
-        'http://localhost:13301/api/reports',
+        'http://localhost:13401/api/reports',
         copyData,
         {
           headers: { Authorization: `Bearer ${token}` }

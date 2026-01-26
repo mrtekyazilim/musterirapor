@@ -52,7 +52,7 @@ export function Reports() {
 
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/reports', {
+      const response = await axios.get('http://localhost:13401/api/reports', {
         headers: { Authorization: `Bearer ${token}` }
       })
 

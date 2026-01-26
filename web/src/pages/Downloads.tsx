@@ -44,7 +44,7 @@ export function Downloads() {
       description: 'Tarayıcı üzerinden erişim (PWA)',
       version: 'Her Zaman Güncel',
       size: '-',
-      downloadUrl: 'http://localhost:13303',
+      downloadUrl: 'http://localhost:13403',
       available: true,
     },
   ]

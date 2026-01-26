@@ -110,7 +110,7 @@ const ChatReports: React.FC = () => {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13301/api/chat/ask',
+        'http://localhost:13401/api/chat/ask',
         { message: inputMessage },
         {
           headers: {
@@ -171,7 +171,7 @@ const ChatReports: React.FC = () => {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13301/api/chat/ask',
+        'http://localhost:13401/api/chat/ask',
         {
           message: messageText,
           reportId: suggestion._id // Direkt rapor ID'si gönder

@@ -1,0 +1,25 @@
+{
+  "name": "raporkolay",
+  "version": "1.0.0",
+  "description": "RaporKolay Monorepo - Connector Rapor Sistemi",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"kernel,admin,client,web\" -c \"blue,green,yellow,magenta\" \"yarn dev:kernel\" \"yarn dev:admin\" \"yarn dev:client\" \"yarn dev:web\"",
+    "dev:kernel": "cd kernel && yarn dev",
+    "dev:admin": "cd adminpanel && yarn dev",
+    "dev:client": "cd client && yarn dev",
+    "dev:web": "cd web && yarn dev",
+    "install:all": "yarn && cd kernel && yarn && cd ../adminpanel && yarn && cd ../client && yarn && cd ../web && yarn"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "RaporKolay",
+    "monorepo",
+    "connector",
+    "reports"
+  ],
+  "author": "",
+  "license": "ISC"
+}

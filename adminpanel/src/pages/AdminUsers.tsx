@@ -27,7 +27,7 @@ export function AdminUsers() {
   const loadUsers = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/admin-users', {
+      const response = await axios.get('http://localhost:13401/api/admin-users', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -46,7 +46,7 @@ export function AdminUsers() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.post(
-        'http://localhost:13301/api/admin-users',
+        'http://localhost:13401/api/admin-users',
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }

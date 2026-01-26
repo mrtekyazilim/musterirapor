@@ -27,7 +27,7 @@ export function Profile() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.put(
-        'http://localhost:13301/api/auth/change-password',
+        'http://localhost:13401/api/auth/change-password',
         {
           currentPassword: passwordData.currentPassword,
           newPassword: passwordData.newPassword

@@ -25,7 +25,7 @@ yarn seed
 yarn dev
 ```
 
-Backend `http://localhost:13301` adresinde çalışacak.
+Backend `http://localhost:13401` adresinde çalışacak.
 
 ### Admin Kullanıcı Bilgileri
 
@@ -44,7 +44,7 @@ cd adminpanel
 yarn dev
 ```
 
-Admin Panel `http://localhost:13302` adresinde çalışacak.
+Admin Panel `http://localhost:13402` adresinde çalışacak.
 
 ## 4. Client Uygulaması Başlatma
 
@@ -58,11 +58,11 @@ cd client
 yarn dev
 ```
 
-Client Uygulaması `http://localhost:13303` adresinde çalışacak.
+Client Uygulaması `http://localhost:13403` adresinde çalışacak.
 
 ## 5. İlk Kullanıcı Oluşturma
 
-1. Admin Panel'e giriş yapın: `http://localhost:13302`
+1. Admin Panel'e giriş yapın: `http://localhost:13402`
    - Kullanıcı Adı: admin
    - Şifre: admin123
 
@@ -81,7 +81,7 @@ Client Uygulaması `http://localhost:13303` adresinde çalışacak.
 
 ## 6. Client Uygulamasında Giriş Yapma
 
-1. Client Uygulamasına gidin: `http://localhost:13303`
+1. Client Uygulamasına gidin: `http://localhost:13403`
 
 2. Oluşturduğunuz kullanıcı bilgileriyle giriş yapın:
    - Kullanıcı Adı: test
@@ -91,9 +91,9 @@ Client Uygulaması `http://localhost:13303` adresinde çalışacak.
 
 ## Çalışma Portları
 
-- **Backend API:** http://localhost:13301
-- **Admin Panel:** http://localhost:13302
-- **Client App:** http://localhost:13303
+- **Backend API:** http://localhost:13401
+- **Admin Panel:** http://localhost:13402
+- **Client App:** http://localhost:13403
 
 ## Önemli Notlar
 

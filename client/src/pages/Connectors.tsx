@@ -56,7 +56,7 @@ export function Connectors() {
   const loadConnectors = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/connectors', {
+      const response = await axios.get('http://localhost:13401/api/connectors', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -77,7 +77,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13301/api/connectors',
+        'http://localhost:13401/api/connectors',
         {
           connectorName: formData.connectorName,
           clientId: formData.clientId,
@@ -134,7 +134,7 @@ export function Connectors() {
       }
 
       const response = await axios.put(
-        `http://localhost:13301/api/connectors/${editingConnector._id}`,
+        `http://localhost:13401/api/connectors/${editingConnector._id}`,
         updateData,
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -160,7 +160,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.delete(
-        `http://localhost:13301/api/connectors/${connectorToDelete}`,
+        `http://localhost:13401/api/connectors/${connectorToDelete}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -209,7 +209,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13301/api/connectors',
+        'http://localhost:13401/api/connectors',
         {
           connectorName: copyName.trim(),
           clientId: connectorToCopy.clientId,
@@ -260,7 +260,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        `http://localhost:13301/api/connectors/${connectorId}/test`,
+        `http://localhost:13401/api/connectors/${connectorId}/test`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -304,7 +304,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13301/api/connector-proxy/datetime',
+        'http://localhost:13401/api/connector-proxy/datetime',
         {
           clientPass: formData.clientPassword
         },
@@ -360,7 +360,7 @@ export function Connectors() {
       const token = localStorage.getItem('clientToken')
 
       const response = await axios.post(
-        'http://localhost:13301/api/connector-proxy/mssql',
+        'http://localhost:13401/api/connector-proxy/mssql',
         {
           clientPass: formData.clientPassword,
           config: {

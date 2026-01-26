@@ -40,7 +40,7 @@ export function Dashboard() {
   const loadCurrentUser = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/auth/me', {
+      const response = await axios.get('http://localhost:13401/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -93,7 +93,7 @@ export function Dashboard() {
 
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/reports', {
+      const response = await axios.get('http://localhost:13401/api/reports', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -120,7 +120,7 @@ export function Dashboard() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        `http://localhost:13301/api/reports/${reportId}/execute`,
+        `http://localhost:13401/api/reports/${reportId}/execute`,
         { date1: '', date2: '', search: '' },
         { headers: { Authorization: `Bearer ${token}` } }
       )

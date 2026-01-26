@@ -51,7 +51,7 @@ export function ReportExecute() {
   const loadReport = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get(`http://localhost:13301/api/reports/${id}`, {
+      const response = await axios.get(`http://localhost:13401/api/reports/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -173,7 +173,7 @@ export function ReportExecute() {
       sqlQuery = sqlQuery.replace(/@search/g, `'${escapedSearch}'`)
 
       const response = await axios.post(
-        `http://localhost:13301/api/reports/${report._id}/execute`,
+        `http://localhost:13401/api/reports/${report._id}/execute`,
         {
           date1,
           date2,

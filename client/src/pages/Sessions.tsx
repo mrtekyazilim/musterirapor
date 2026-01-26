@@ -29,7 +29,7 @@ export function Sessions() {
   const loadSessions = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13301/api/sessions', {
+      const response = await axios.get('http://localhost:13401/api/sessions', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -53,7 +53,7 @@ export function Sessions() {
 
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.delete(`http://localhost:13301/api/sessions/${sessionToDelete}`, {
+      const response = await axios.delete(`http://localhost:13401/api/sessions/${sessionToDelete}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 

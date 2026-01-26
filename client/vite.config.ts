@@ -51,7 +51,7 @@ export default defineConfig({
         mode: 'production',
         runtimeCaching: [
           {
-            urlPattern: /^http:\/\/localhost:13301\/api\/.*/i,
+            urlPattern: /^http:\/\/localhost:13401\/api\/.*/i,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
@@ -72,10 +72,10 @@ export default defineConfig({
     },
   },
   server: {
-    port: 13303,
+    port: 13403,
     proxy: {
       '/api': {
-        target: 'http://localhost:13301',
+        target: 'http://localhost:13401',
         changeOrigin: true,
       },
     },

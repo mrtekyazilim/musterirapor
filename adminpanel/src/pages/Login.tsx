@@ -47,7 +47,7 @@ export function Login() {
       const deviceId = getDeviceId()
       const browserInfo = getBrowserInfo()
 
-      const response = await axios.post('http://localhost:13301/api/auth/admin/login', {
+      const response = await axios.post('http://localhost:13401/api/auth/admin/login', {
         username,
         password,
         deviceId,

@@ -62,7 +62,7 @@ export function Dashboard() {
   const loadStats = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/customers', {
+      const response = await axios.get('http://localhost:13401/api/customers', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -106,7 +106,7 @@ export function Dashboard() {
   const loadActivities = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/activities?limit=5', {
+      const response = await axios.get('http://localhost:13401/api/activities?limit=5', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -121,7 +121,7 @@ export function Dashboard() {
   const loadSystemMetrics = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/metrics', {
+      const response = await axios.get('http://localhost:13401/api/metrics', {
         headers: { Authorization: `Bearer ${token}` }
       })
 

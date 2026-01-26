@@ -24,7 +24,7 @@ export function Reports() {
   const loadActivities = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13301/api/activities?limit=100', {
+      const response = await axios.get('http://localhost:13401/api/activities?limit=100', {
         headers: { Authorization: `Bearer ${token}` }
       })
 
