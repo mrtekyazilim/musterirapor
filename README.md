@@ -6,10 +6,10 @@ Connector uygulaması üzerinden müşterilere özel raporlar sağlayan tam ente
 
 Bu proje monorepo mimarisinde 4 ana bileşenden oluşur:
 
-- **`kernel/`** - Backend API servisi (Node.js + Express + MongoDB) - Port 13301
-- **`adminpanel/`** - Yönetim paneli (React + TypeScript + Tailwind) - Port 13302
-- **`client/`** - Kullanıcı PWA uygulaması (React + TypeScript + PWA) - Port 13303
-- **`web/`** - Web sitesi (React + TypeScript + Vite) - Port 13304
+- **`kernel/`** - Backend API servisi (Node.js + Express + MongoDB) - Port 13401
+- **`adminpanel/`** - Yönetim paneli (React + TypeScript + Tailwind) - Port 13402
+- **`client/`** - Kullanıcı PWA uygulaması (React + TypeScript + PWA) - Port 13403
+- **`web/`** - Web sitesi (React + TypeScript + Vite) - Port 13404
 
 ## 🚀 Teknolojiler
 
@@ -95,10 +95,10 @@ yarn dev
 
 ### Uygulama URL'leri
 
-- **API**: http://localhost:13301
-- **Admin Panel**: http://localhost:13302
-- **Client PWA**: http://localhost:13303
-- **Web**: http://localhost:13304
+- **API**: http://localhost:13401
+- **Admin Panel**: http://localhost:13402
+- **Client PWA**: http://localhost:13403
+- **Web**: http://localhost:13404
 
 ### Build
 

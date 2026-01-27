@@ -305,15 +305,14 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        `${config.apiUrl}/connector-proxy/datetime`,
+        `${config.apiUrl}/connector-proxy/test/datetime`,
         {
+          clientId: formData.clientId,
           clientPass: formData.clientPassword
         },
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            'clientId': formData.clientId,
-            'clientPass': formData.clientPassword,
             'Content-Type': 'application/json'
           }
         }
@@ -361,8 +360,9 @@ export function Connectors() {
       const token = localStorage.getItem('clientToken')
 
       const response = await axios.post(
-        `${config.apiUrl}/connector-proxy/mssql`,
+        `${config.apiUrl}/connector-proxy/test/mssql`,
         {
+          clientId: formData.clientId,
           clientPass: formData.clientPassword,
           config: {
             user: formData.sqlUser,
@@ -376,8 +376,6 @@ export function Connectors() {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            'clientId': formData.clientId,
-            'clientPass': formData.clientPassword,
             'Content-Type': 'application/json'
           }
         }
