@@ -14,7 +14,7 @@ export function Copyright() {
           rel="noopener noreferrer"
           className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium underline"
         >
-          Mr.TEK Yazılım Evi
+          Mr.TEK Softwares
         </a>
       </p>
     </div>
