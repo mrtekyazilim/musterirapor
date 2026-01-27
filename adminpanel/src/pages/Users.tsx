@@ -290,7 +290,7 @@ export function Users() {
 
       if (response.data.success) {
         // Client token'ı URL parametresi olarak gönder
-        const clientUrl = `http://localhost:13403/auto-login?token=${encodeURIComponent(response.data.token)}&user=${encodeURIComponent(JSON.stringify(response.data.user))}&deviceId=${encodeURIComponent(deviceId)}`
+        const clientUrl = `${config.clientUrl}/auto-login?token=${encodeURIComponent(response.data.token)}&user=${encodeURIComponent(JSON.stringify(response.data.user))}&deviceId=${encodeURIComponent(deviceId)}`
 
         // Client uygulamasını aç
         window.open(clientUrl, '_blank')
