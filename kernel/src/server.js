@@ -37,7 +37,7 @@ const createDefaultAdmin = async () => {
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log('MongoDB bağlantısı başarılı');
+    console.log('MongoDB bağlantısı başarılı 2026-01-28 00:14');
     createDefaultAdmin();
   })
   .catch((err) => console.error('MongoDB bağlantı hatası:', err));
