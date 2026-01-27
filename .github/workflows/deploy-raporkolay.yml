@@ -55,7 +55,8 @@ jobs:
             yarn install --production
 
             echo "🔄 Restarting Kernel service..."
-            sudo pm2 restart raporkolay
+
+            echo "${{ secrets.VPS_PASSWORD }}" | sudo -S pm2 restart raporkolay
 
             # Health check
             echo "🏥 Running health check..."
