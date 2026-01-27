@@ -98,7 +98,7 @@ export function Layout() {
           const deviceId = localStorage.getItem('deviceId')
 
           try {
-            const updateResponse = await axios.put(
+            await axios.put(
               'http://localhost:13401/api/sessions/active-connector',
               { deviceId, connectorId: selectedConnector._id },
               { headers: { Authorization: `Bearer ${token}` } }

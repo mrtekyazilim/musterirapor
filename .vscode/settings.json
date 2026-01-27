@@ -1,0 +1,6 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    ".\\update-client-urls.ps1": true,
+    "git checkout": true
+  }
+}

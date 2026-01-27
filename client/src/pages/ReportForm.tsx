@@ -309,7 +309,7 @@ export function ReportForm() {
     }
   }
 
-  const handleCopy = async () => {
+  const _handleCopy = async () => {
     if (!id || !formData.raporAdi) {
       toast.error('Kopyalanacak rapor bulunamadı')
       return
@@ -989,7 +989,7 @@ export function ReportForm() {
                               fill="#8884d8"
                               dataKey="value"
                             >
-                              {chartData.map((entry, index) => (
+                              {chartData.map((_entry, index) => (
                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                               ))}
                             </Pie>

@@ -9,6 +9,11 @@
     "dev:admin": "cd adminpanel && yarn dev",
     "dev:client": "cd client && yarn dev",
     "dev:web": "cd web && yarn dev",
+    "build": "powershell -ExecutionPolicy Bypass -File ./distall.ps1",
+    "build:kernel": "cd kernel && echo 'Kernel uses src/ directly'",
+    "build:admin": "cd adminpanel && yarn build",
+    "build:client": "cd client && yarn build",
+    "build:web": "cd web && yarn build",
     "install:all": "yarn && cd kernel && yarn && cd ../adminpanel && yarn && cd ../client && yarn && cd ../web && yarn"
   },
   "devDependencies": {

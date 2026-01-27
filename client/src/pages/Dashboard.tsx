@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import * as LucideIcons from 'lucide-react'
-import { toast } from 'sonner'
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts'
 
 interface DashboardReport {
@@ -294,7 +293,7 @@ export function Dashboard() {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {chartData.map((entry, index) => (
+                  {chartData.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

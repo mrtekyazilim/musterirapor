@@ -79,7 +79,7 @@ export function Login() {
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
             <div className="relative z-10 h-full flex flex-col justify-center">
               <div className="mb-6">
-                <Logo size="lg" variant="white" />
+                <Logo size="lg" />
                 <p className="mt-2 text-lg text-indigo-100 font-medium">Admin Panel</p>
               </div>
 

@@ -57,7 +57,7 @@ export function Layout() {
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <a href="/dashboard" className="hover:opacity-80 transition-opacity cursor-pointer">
-                  <Logo size="md" variant="default" />
+                  <Logo size="md" />
                 </a>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
