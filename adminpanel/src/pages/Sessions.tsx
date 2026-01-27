@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Monitor, Smartphone, Trash2 } from 'lucide-react'
 import { toast } from 'sonner'
 import { ConfirmDialog } from '../components/ConfirmDialog'
+import { config } from '../config'
 
 interface Session {
   _id: string
@@ -29,7 +30,7 @@ export function Sessions() {
   const loadSessions = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13401/api/sessions', {
+      const response = await axios.get(`${config.apiUrl}/sessions`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -53,7 +54,7 @@ export function Sessions() {
 
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.delete(`http://localhost:13401/api/sessions/${sessionToDelete}`, {
+      const response = await axios.delete(`${config.apiUrl}/sessions/${sessionToDelete}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 

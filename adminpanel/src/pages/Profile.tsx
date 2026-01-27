@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'sonner'
+import { config } from '../config'
 
 export function Profile() {
   const [loading, setLoading] = useState(false)
@@ -27,7 +28,7 @@ export function Profile() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.put(
-        'http://localhost:13401/api/auth/change-password',
+        `${config.apiUrl}/auth/change-password`,
         {
           currentPassword: passwordData.currentPassword,
           newPassword: passwordData.newPassword

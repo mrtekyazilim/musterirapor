@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { UserCog, Plus } from 'lucide-react'
 import { toast } from 'sonner'
+import { config } from '../config'
 
 interface AdminUser {
   _id: string
@@ -27,7 +28,7 @@ export function AdminUsers() {
   const loadUsers = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13401/api/admin-users', {
+      const response = await axios.get(`${config.apiUrl}/admin-users`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -46,7 +47,7 @@ export function AdminUsers() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.post(
-        'http://localhost:13401/api/admin-users',
+        `${config.apiUrl}/admin-users`,
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }

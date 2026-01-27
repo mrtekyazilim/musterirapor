@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Building2, Filter, Search, Edit2, Trash2, ExternalLink, Users as UsersIcon, CheckCircle, XCircle, Clock } from 'lucide-react'
 import { toast } from 'sonner'
+import { config } from '../config'
 
 interface User {
   _id: string
@@ -108,7 +109,7 @@ export function Users() {
   const loadUsers = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get('http://localhost:13401/api/customers', {
+      const response = await axios.get(`${config.apiUrl}/customers`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -142,7 +143,7 @@ export function Users() {
         }
       }
 
-      const response = await axios.post('http://localhost:13401/api/customers', formattedData, {
+      const response = await axios.post(`${config.apiUrl}/customers`, formattedData, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -211,7 +212,7 @@ export function Users() {
       }
 
       const response = await axios.put(
-        `http://localhost:13401/api/customers/${editingUser._id}`,
+        `${config.apiUrl}/customers/${editingUser._id}`,
         formattedData,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -256,7 +257,7 @@ export function Users() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.delete(
-        `http://localhost:13401/api/customers/${deletingUser._id}`,
+        `${config.apiUrl}/customers/${deletingUser._id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       )
 
@@ -278,7 +279,7 @@ export function Users() {
       const deviceId = `admin-panel-${Date.now()}`
 
       const response = await axios.post(
-        `http://localhost:13401/api/auth/admin-login-as-customer/${user._id}`,
+        `${config.apiUrl}/auth/admin-login-as-customer/${user._id}`,
         {
           deviceId,
           deviceName: 'Admin Panel',

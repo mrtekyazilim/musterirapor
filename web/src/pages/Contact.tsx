@@ -49,10 +49,10 @@ export function Contact() {
                     Telefon
                   </h3>
                   <a
-                    href="tel:+905312246510"
+                    href="tel:+905400476142"
                     className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                   >
-                    +90 531 224 65 10
+                    +90 540 047 61 42
                   </a>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function Contact() {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 text-gray-900 dark:text-white">
               <a
-                href="https://wa.me/905312246510"
+                href="https://wa.me/905400476142"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block "
@@ -76,7 +76,7 @@ export function Contact() {
                       WhatsApp
                     </h3>
 
-                    +90 531 224 65 10
+                    +90 540 047 61 42
 
                   </div>
                 </div>

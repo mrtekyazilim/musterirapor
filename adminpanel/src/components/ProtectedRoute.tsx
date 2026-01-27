@@ -1,6 +1,7 @@
 import { Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { config } from '../config'
 
 interface ProtectedRouteProps {
   children: React.ReactNode
@@ -25,7 +26,7 @@ export function ProtectedRoute({ children, requireAdmin = false }: ProtectedRout
         return
       }
 
-      const response = await axios.get('http://localhost:13401/api/auth/me', {
+      const response = await axios.get(`${config.apiUrl}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
