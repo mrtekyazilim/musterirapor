@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import config from '@/config'
 
 export function Pricing() {
   const plans = [
@@ -117,7 +118,7 @@ export function Pricing() {
               </ul>
 
               <a
-                href="http://localhost:13403/login"
+                href={`${config.clientAppUrl}/login`}
                 className={`block w-full py-3 px-4 text-center font-semibold rounded-lg transition-colors ${plan.popular
                   ? 'bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600'

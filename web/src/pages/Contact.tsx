@@ -28,10 +28,10 @@ export function Contact() {
                     Email
                   </h3>
                   <a
-                    href="mailto:iletisim@RaporKolay.com.tr"
+                    href="mailto:bilgi@raporkolay.com.tr"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                   >
-                    iletisim@RaporKolay.com.tr
+                    bilgi@raporkolay.com.tr
                   </a>
                 </div>
               </div>
@@ -49,10 +49,10 @@ export function Contact() {
                     Telefon
                   </h3>
                   <a
-                    href="tel:+905327298827"
+                    href="tel:+905312246510"
                     className="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                   >
-                    +90 532 729 88 27
+                    +90 531 224 65 10
                   </a>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function Contact() {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 text-gray-900 dark:text-white">
               <a
-                href="https://wa.me/905327298827"
+                href="https://wa.me/905312246510"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block "
@@ -76,7 +76,7 @@ export function Contact() {
                       WhatsApp
                     </h3>
 
-                    +90 532 729 88 27
+                    +90 531 224 65 10
 
                   </div>
                 </div>

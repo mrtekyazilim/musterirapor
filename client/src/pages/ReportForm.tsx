@@ -309,42 +309,6 @@ export function ReportForm() {
     }
   }
 
-  const _handleCopy = async () => {
-    if (!id || !formData.raporAdi) {
-      toast.error('Kopyalanacak rapor bulunamadı')
-      return
-    }
-
-    try {
-      setLoading(true)
-      const token = localStorage.getItem('clientToken')
-
-      // Create copy with modified name and inactive status
-      const copyData = {
-        ...formData,
-        raporAdi: `${formData.raporAdi} - Kopya 1`,
-        aktif: false
-      }
-
-      const response = await axios.post(
-        'http://localhost:13401/api/reports',
-        copyData,
-        {
-          headers: { Authorization: `Bearer ${token}` }
-        }
-      )
-
-      if (response.data.success) {
-        toast.success('Rapor kopyalandı')
-        navigate(`/report-designs/${response.data.report._id}`)
-      }
-    } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Kopya oluşturulamadı')
-    } finally {
-      setLoading(false)
-    }
-  }
-
   const renderIcon = (iconName: string) => {
     const IconComponent = (LucideIcons as any)[iconName] || LucideIcons.FileText
     return <IconComponent className="w-6 h-6" />

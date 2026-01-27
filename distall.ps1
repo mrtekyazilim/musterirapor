@@ -26,13 +26,18 @@ $packageJson.scripts.seed = "node seed.js"
 $packageJson | ConvertTo-Json -Depth 10 | Set-Content "..\dist\kernel\package.json"
 
 if (Test-Path ".env") {
-  # Copy .env and set NODE_ENV=production
-  $envContent = Get-Content ".env" -Raw
-  $envContent = $envContent -replace "NODE_ENV=.*", "NODE_ENV=production"
-  if ($envContent -notmatch "NODE_ENV=") {
-    $envContent += "`nNODE_ENV=production"
+  # Create .env.sample with empty values
+  $envContent = Get-Content ".env"
+  $sampleContent = $envContent | ForEach-Object {
+    if ($_ -match '^([A-Z_]+)=(.*)$') {
+      "$($matches[1])="
+    }
+    else {
+      $_
+    }
   }
-  Set-Content -Path "..\dist\kernel\.env" -Value $envContent -NoNewline
+  $sampleContent | Out-File -FilePath "..\dist\kernel\.env.sample" -Encoding UTF8
+  Write-Host "  OK - Created .env.sample (values cleared)" -ForegroundColor Green
 }
 Write-Host "  OK - Kernel copied to dist/kernel/" -ForegroundColor Green
 cd ..

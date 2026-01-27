@@ -6,11 +6,11 @@ interface LogoProps {
   variant?: 'default' | 'white'
 }
 
-export function Logo({ className, size = 'md', variant = 'default' }: LogoProps) {
+export function Logo({ className, size = 'md' }: LogoProps) {
   const sizeClasses = {
-    sm: 'w-7 h-7 text-sm',
-    md: 'w-9 h-9 text-base',
-    lg: 'w-11 h-11 text-lg'
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-2xl'
   }
 
   const textSizeClasses = {
@@ -19,16 +19,14 @@ export function Logo({ className, size = 'md', variant = 'default' }: LogoProps)
     lg: 'text-2xl'
   }
 
-  const colorClasses = variant === 'white'
-    ? 'border-white text-white'
-    : 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400'
+
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      <span className={`${sizeClasses[size]} ${colorClasses} flex items-center justify-center font-bold pb-0.5`}>
+      <span className={`${sizeClasses[size]} font-bold  text-gray-600 dark:text-gray-400`}>
         Rapor
       </span>
-      <span className={`${textSizeClasses[size]} font-bold ${variant === 'white' ? 'text-white' : 'text-blue-600 dark:text-blue-400'}`}>
+      <span className={`${textSizeClasses[size]} font-bold  text-blue-600 dark:text-blue-400`}>
         Kolay
       </span>
     </div>

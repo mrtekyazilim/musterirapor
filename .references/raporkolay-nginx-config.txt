@@ -130,10 +130,10 @@ server {
     }
 }
 
-# Web Site - raporkolay.com and www.raporkolay.com
+# Web Site - raporkolay.com
 server {
     listen 80;
-    server_name raporkolay.com www.raporkolay.com;
+    server_name raporkolay.com;
     
     root /apps/raporkolay/web;
     index index.html;

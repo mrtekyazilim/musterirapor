@@ -1,5 +1,6 @@
 import { ArrowRight, Smartphone, Globe, Shield, Zap, Database, Cpu } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import config from '@/config'
 
 export function Home() {
   const features = [
@@ -71,7 +72,7 @@ export function Home() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <a
-                  href="http://localhost:13403/login"
+                  href={`${config.clientAppUrl}/login`}
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors"
                 >
                   Demo'yu Deneyin

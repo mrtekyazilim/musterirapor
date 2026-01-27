@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Moon, Sun } from 'lucide-react'
 import { Logo } from './Logo'
 import { useTheme } from './ThemeProvider'
+import config from '@/config'
 
 export function Header() {
   const { theme, setTheme } = useTheme()
@@ -48,7 +49,7 @@ export function Header() {
             </button>
 
             <a
-              href="http://localhost:13403/login"
+              href={`${config.clientAppUrl}/login`}
               className="px-4 py-2 text-sm font-medium text-white bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg transition-colors"
             >
               Giriş Yap

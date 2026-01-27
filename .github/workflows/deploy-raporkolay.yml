@@ -1,0 +1,74 @@
+name: Deploy RaporKolay to VPS
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "dist/kernel/**"
+      - "dist/adminpanel/**"
+      - "dist/client/**"
+      - "dist/web/**"
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy RaporKolay App to VPS
+    runs-on: ubuntu-latest
+    environment: secrets
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy RaporKolay to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          script: |
+            set -e
+            echo "🚀 Starting deployment...💪"
+
+            cd ${{ secrets.VPS_DEPLOY_PATH }}/src
+
+            echo "📥 Pulling latest code..."
+            git fetch origin && git reset --hard origin/main
+
+
+            echo "🚚 Deploying AdminPanel..."
+            rm -r ${{ secrets.VPS_DEPLOY_PATH }}/adminpanel/*
+            cp -r ${{ secrets.VPS_DEPLOY_PATH }}/src/dist/adminpanel/* ${{ secrets.VPS_DEPLOY_PATH }}/adminpanel/
+
+            echo "🚚 Deploying Client..."
+            rm -r ${{ secrets.VPS_DEPLOY_PATH }}/client/*
+            cp -r ${{ secrets.VPS_DEPLOY_PATH }}/src/dist/client/* ${{ secrets.VPS_DEPLOY_PATH }}/client/
+            echo "🚚 Deploying Web..."
+            rm -r ${{ secrets.VPS_DEPLOY_PATH }}/web/*
+            cp -r ${{ secrets.VPS_DEPLOY_PATH }}/src/dist/web/* ${{ secrets.VPS_DEPLOY_PATH }}/web/
+
+            echo "🚚 Deploying Kernel..."
+            cp -r ${{ secrets.VPS_DEPLOY_PATH }}/src/dist/kernel/* ${{ secrets.VPS_DEPLOY_PATH }}/kernel/
+            cd ${{ secrets.VPS_DEPLOY_PATH }}/kernel
+            yarn install --production
+
+            echo "🔄 Restarting Kernel service..."
+            pm2 restart raporkolay
+
+            # Health check
+            echo "🏥 Running health check..."
+            sleep 5
+            curl -f http://localhost:13401 || exit 1
+
+            echo "✅ RaporKolay Deployment completed successfully!"
+
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ RaporKolay deployed successfully to VPS"
+          else
+            echo "❌ RaporKolay deployment failed"
+          fi

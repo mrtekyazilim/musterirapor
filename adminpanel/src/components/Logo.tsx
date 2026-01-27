@@ -24,7 +24,7 @@ export function Logo({ size = 'md' }: LogoProps) {
       <span className={`${sizeClasses[size]} flex items-center justify-center font-bold text-green-600 `}>
         Rapor
       </span>
-      <span className={`${textSizeClasses[size]} font-bold text-gray-900 dark:text-white`}>
+      <span className={`${textSizeClasses[size]} ms-0.5 font-bol11d text-gray-900 dark:text-white`}>
         Kolay
       </span>
     </div>
