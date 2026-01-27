@@ -59,7 +59,7 @@ jobs:
 
             # Health check
             echo "🏥 Running health check..."
-            sleep 5
+            sleep 8
             curl -f http://localhost:13401 || exit 1
 
             echo "✅ RaporKolay Deployment completed successfully!"
