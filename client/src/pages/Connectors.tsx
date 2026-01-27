@@ -3,6 +3,7 @@ import axios from 'axios'
 import { toast } from 'sonner'
 import { Plus, Trash2, Edit2, Copy, Database, Eye, EyeOff, Plug, CheckCircle } from 'lucide-react'
 import { ConfirmDialog } from '../components/ConfirmDialog'
+import config from '../config'
 
 interface Connector {
   _id: string
@@ -56,7 +57,7 @@ export function Connectors() {
   const loadConnectors = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13401/api/connectors', {
+      const response = await axios.get(`${config.apiUrl}/connectors`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -77,7 +78,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13401/api/connectors',
+        `${config.apiUrl}/connectors`,
         {
           connectorName: formData.connectorName,
           clientId: formData.clientId,
@@ -134,7 +135,7 @@ export function Connectors() {
       }
 
       const response = await axios.put(
-        `http://localhost:13401/api/connectors/${editingConnector._id}`,
+        `${config.apiUrl}/connectors/${editingConnector._id}`,
         updateData,
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -160,7 +161,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.delete(
-        `http://localhost:13401/api/connectors/${connectorToDelete}`,
+        `${config.apiUrl}/connectors/${connectorToDelete}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -209,7 +210,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13401/api/connectors',
+        `${config.apiUrl}/connectors`,
         {
           connectorName: copyName.trim(),
           clientId: connectorToCopy.clientId,
@@ -260,7 +261,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        `http://localhost:13401/api/connectors/${connectorId}/test`,
+        `${config.apiUrl}/connectors/${connectorId}/test`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -304,7 +305,7 @@ export function Connectors() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        'http://localhost:13401/api/connector-proxy/datetime',
+        `${config.apiUrl}/connector-proxy/datetime`,
         {
           clientPass: formData.clientPassword
         },
@@ -360,7 +361,7 @@ export function Connectors() {
       const token = localStorage.getItem('clientToken')
 
       const response = await axios.post(
-        'http://localhost:13401/api/connector-proxy/mssql',
+        `${config.apiUrl}/connector-proxy/mssql`,
         {
           clientPass: formData.clientPassword,
           config: {

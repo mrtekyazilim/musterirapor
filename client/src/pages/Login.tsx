@@ -5,6 +5,7 @@ import { ThemeToggle } from '../components/ThemeToggle'
 import { Logo } from '../components/Logo'
 import { usePWAInstall } from '../hooks/usePWAInstall'
 import { Monitor, Smartphone, Tablet, Zap, Shield, TrendingUp, Download } from 'lucide-react'
+import config from '../config'
 
 export function Login() {
   const [username, setUsername] = useState('')
@@ -69,7 +70,7 @@ export function Login() {
       const deviceId = getDeviceId()
       const browserInfo = getBrowserInfo()
 
-      const response = await axios.post('http://localhost:13401/api/auth/client/login', {
+      const response = await axios.post(`${config.apiUrl}/auth/client/login`, {
         username,
         password,
         deviceId,

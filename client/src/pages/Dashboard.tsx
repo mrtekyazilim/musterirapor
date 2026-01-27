@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import * as LucideIcons from 'lucide-react'
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts'
+import config from '../config'
 
 interface DashboardReport {
   _id: string
@@ -39,7 +40,7 @@ export function Dashboard() {
   const loadCurrentUser = async () => {
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13401/api/auth/me', {
+      const response = await axios.get(`${config.apiUrl}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -92,7 +93,7 @@ export function Dashboard() {
 
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13401/api/reports', {
+      const response = await axios.get(`${config.apiUrl}/reports`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
@@ -119,7 +120,7 @@ export function Dashboard() {
     try {
       const token = localStorage.getItem('clientToken')
       const response = await axios.post(
-        `http://localhost:13401/api/reports/${reportId}/execute`,
+        `${config.apiUrl}/reports/${reportId}/execute`,
         { date1: '', date2: '', search: '' },
         { headers: { Authorization: `Bearer ${token}` } }
       )

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { toast } from 'sonner'
 import * as LucideIcons from 'lucide-react'
+import config from '../config'
 
 interface Report {
   _id: string
@@ -52,7 +53,7 @@ export function Reports() {
 
     try {
       const token = localStorage.getItem('clientToken')
-      const response = await axios.get('http://localhost:13401/api/reports', {
+      const response = await axios.get(`${config.apiUrl}/reports`, {
         headers: { Authorization: `Bearer ${token}` }
       })
 
