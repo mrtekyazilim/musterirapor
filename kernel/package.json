@@ -1,7 +1,7 @@
 {
   "name": "mrapor-kernel",
   "version": "1.0.0",
-  "description": "RaporKolay Backend API Service",
+  "description": "RaporKolay Backend API Service.",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

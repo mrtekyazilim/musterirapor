@@ -24,8 +24,8 @@ export function Docs() {
 
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6">Temel Özellikler</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Mobil, tablet ve masaüstü desteği</li>
-            <li>SQL sorguları ile özel raporlar</li>
+            <li>Mobil, tablet ve masaüstü desteği.</li>
+            <li>SQL sorguları ile özel raporlar.</li>
             <li>Port forwarding gerektirmez</li>
             <li>Tüm ERP sistemleriyle uyumlu</li>
             <li>Güvenli connector yapısı</li>
